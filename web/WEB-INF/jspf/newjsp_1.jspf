@@ -1,0 +1,27 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%
+            String cerrar =request.getParameter("cerrar");
+            HttpSession sesion = request.getSession();
+            if(cerrar !=null)
+            {
+                sesion.invalidate();
+            }else
+            {
+                Object user = session.getAttribute("User");
+                
+                Object iniciado = session.getAttribute("iniciado");
+                String Mensaje ="";
+                if(iniciado != null){
+                    if(user != null){
+                    
+                        
+                                                         
+                        request.getRequestDispatcher("PaginaPrincipal.jsp").forward(request, response);
+                               
+                            
+                        }
+                    }
+                }
+            
+%>
